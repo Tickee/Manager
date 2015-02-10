@@ -4,12 +4,12 @@ This package serves as reference only. Take what you need.
 
 
 ### Structure
-> inside.tick.ee/					Login		login
-> /widget/account/{accountname}		Order		w-order	account
-> /widget/event/{accountid}			Order		w-order	event
-> /widget/login/					Login		w-login
-> /widget/checkout/{accountname}	Checkout	w-checkout
-> /widget/thanks/{accountname}		Thank you	w-landing
+* inside.tick.ee/ -> Login (login)
+* /widget/account/{accountname} -> Order (w-order.account)
+* /widget/event/{accountid} -> Order (w-order.event)
+* /widget/login/ -> Login (w-login)
+* /widget/checkout/{accountname} -> Checkout (w-checkout)
+* /widget/thanks/{accountname} -> Thank you (w-landing)
 
 
 ### 3-Layer structure
