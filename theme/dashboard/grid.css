@@ -1,0 +1,95 @@
+
+/* Horizontal: SECTIONS */
+
+
+section	{
+	clear: both; padding: 20px 0;
+}
+
+section > div	{
+	width: 1000px; margin: 0 auto;
+}
+
+section > div:after	{
+	display:block; clear: both; height: 0px; content: " "; 
+}
+
+section .right	{
+	float: right;
+}
+
+section.no-clear, section.no-clear > div, section.no-clear > div:after	{ clear: none; }
+
+section.no-space	{ padding: 0; }
+section.no-space-bottom	{ padding-bottom: 0; }
+section.no-space-top	{ padding-top: 0; }
+
+section.space-top	{
+	padding-top: 38px;
+}
+
+section.space-top-double	{ padding-top: 120px; }
+
+
+
+
+/* Vertical: MODULES */
+
+module.grid1			{ width: 5%; }
+module.grid2			{ width: 13.2%; }
+module.grid3			{ width: 21.4%; }
+module.grid4			{ width: 29.6%; }
+module.grid5			{ width: 37.8%; }
+module.grid6			{ width: 46%; }
+module.grid7			{ width: 54.2%; }
+module.grid8			{ width: 62.4%; }
+module.grid9			{ width: 70.6%; }
+module.grid10			{ width: 78.8%; }
+module.grid11			{ width: 87%; }
+module, module.grid12	{ width: 95.2%; float: left; padding: 0 1.6%; }
+
+module:first-child						{ padding-left: 2.4%; }
+module:last-child, module.last-child	{ padding-right: 2.4%; }
+
+/*
+.nfo-dark.grid2, .nfo-black.grid2, .silver .grid2:first-child, .silver .grid2:last-child	{ width: 20%; }
+.nfo-dark.grid3, .nfo-black.grid3, .silver .grid3:first-child, .silver .grid3:last-child	{ width: 33%; }
+.nfo-dark.grid4, .nfo-black.grid4, .silver .grid4:first-child, .silver .grid4:last-child	{ width: 46%; }
+.nfo-dark.grid5, .nfo-black.grid5, .silver .grid5:first-child, .silver .grid5:last-child	{ width: 59%; }
+.nfo-dark.grid6, .nfo-black.grid6, .silver .grid6:first-child, .silver .grid6:last-child	{ width: 72%; }
+*/
+
+
+/* Graphic: SECTIONS */
+
+section.dotted	{
+	margin-top: 80px; padding-top: 80px; background: url( img/dots.png ) repeat-x left top; clear: both; 
+}
+
+section.smalldot-black	{
+	margin-top: 60px; padding-top: 60px; background: #312e2a; border-top: 1px dotted black; 
+}
+
+section.smalldot-bottom-black	{
+	padding-bottom: 60px; margin-bottom: 60px;  background: #312e2a; border-bottom: 1px dotted black;
+}
+
+section.silver	{ padding: 0; }
+section.silver > div, module.silver	{ background: #F6F6F6; overflow: hidden; }
+section.silver > div	{ padding: 20px 0; }
+section.silver.top > div, module.silver.top	{ border-radius: 5px 5px 0 0; }
+section.silver.top	{ margin-top: 40px; }
+section.silver.bottom > div, module.silver.bottom	{ border-radius: 0 0 5px 5px; }
+
+section.sidebar	{
+	padding-top: 100px; width: 1000px; margin: 0 auto; clear: none;
+}
+section.sidebar > div	{
+	width: 25.8%; height: 400px; float: right; clear: none;
+}
+section.sidebar module	{
+	width: inherit; padding: 0;
+}
+
+/* Graphic: MODULES */
+

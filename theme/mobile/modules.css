@@ -1,0 +1,76 @@
+
+/* General Module Styles */
+/* Inset */
+module.inset > *	{ margin: auto 12px; }
+
+/* Light */
+module.light, module.edit .light	{ color: #999; font-size: .86em; line-height: 1.2em; text-align: justify; }
+module.edit .light	{ font-size: .92em; }
+module.aside .light, module.sidebar .light	{ padding: 14px 0 0; color: #666; font-size: .86em; line-height: 1.2em; text-align: justify; }
+
+module.aside .light a	{ font-size: 1em; font-weight: 500; }
+
+input.p50	{ width: 48%; }
+
+/* Big */
+.silver-top module.edit input.big, .silver-top module.new input.big	{ font-size: 2em; margin: 8px 0; float: none; }
+
+
+/* Text Basic */
+module.TextBasic > img {
+	float: left; margin: 0 12px 8px 0;
+}
+
+/* Statistics & Event: Totals */
+
+module.totals li {
+	float: left; padding: 12px; margin: 0 12px 4px 0; background: rgba( 0,0,0, .2 ); border-bottom: 1px solid rgba( 0,0,0, .24 ); border-radius: 5px;
+}
+module.totals li:last-child { margin-right: 0; }
+module.totals li:hover {
+	background: rgba( 0,0,0, .24 ); border-radius: 5px 5px 5px 0;
+}
+
+module.totals a {
+	font-size: 1.24em; font-weight: 200; color: #556c78;
+}
+
+module.totals strong {
+	margin-right: 6px; position: relative; top: 2px;
+	color: white; font-size: 1.42em;
+}
+
+module.totals [info]:before	{
+	content: attr(info); display: none; float: right; clear: both; width: auto; padding: 2px 18px 4px; margin: 35px -12px; position:absolute; left: auto; top: auto; background: rgba( 0,0,0, .4 ); border-radius: 0 0 5px 5px; border-top: dashed 1px #47443f;
+	color: #47443f; font-size: .8em; 
+}
+
+module.totals [info]:hover:before	{
+	opacity: 1; display: block;
+}
+
+module.totals [info]:hover:after	{
+	display: none;
+}
+
+module.resize9	{ font-size: .9em; }
+
+
+
+
+
+/* EVENT OVERVIEW */
+.TickeeSu_event.overview h1:hover a	{ color: #82A3C2; }
+.TickeeSu_event.overview h1:hover a:after	{
+	float: right; content: "edit"; font-weight: normal; font-size: .5em; margin: 0 0 0 8px; padding: 2px 10px; border-radius: 8px; background: white; 
+}
+
+.TickeeSu_event.overview.aside { border-left: 1px solid #98aab4;  }
+.TickeeSu_event.overview #send-container	{
+	height: 380px; margin-top: 24px;  background: url( img/sidebar.bg.png); border-top: 1px solid #98aab4; overflow-x: hidden; overflow-y: auto;
+}
+.silver-bottom #send-container	{ border-radius: 0 0 12px 0; }
+.TickeeSu_event.overview #send-container li	{ border-left: 0; padding: 12px; }
+.TickeeSu_event.overview #send-container li.success	{ background: #c1cab5; }
+.TickeeSu_event.overview #send-container li.fail	{ background: #cabdb5; }
+

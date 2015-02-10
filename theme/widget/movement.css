@@ -1,0 +1,48 @@
+/* General Purpose TRANSITIONS */
+a:hover	{
+	-webkit-transition: color 0s;
+	-moz-transition: color 0s;
+	transition: color 0s;
+}
+a	{
+	-webkit-transition: color .4s linear;
+	-moz-transition: color .4s linear;
+	transition: color .4s linear;
+}
+
+
+
+/* Tickee Fixed toggles */
+
+.fixed	{ position: fixed; }
+
+nav.fixed	{
+	display:block; top: -28px; left: 0; width: 100%;  padding-bottom: 12px; z-index: 100;
+}
+nav.before-shield.fixed	{
+	border-bottom: 1px solid #47443f; background-image:  url( img/head.nav.png ), url( img/nav.bg.clouds.png); background-repeat: no-repeat, repeat; z-index: 1
+}
+header.fixed-parent	{
+	top: -36px; position: fixed; padding-top: 0;
+}
+
+header > nav.fixed	{
+	position: relative; padding-top: 42px; width: 1000px;
+}
+
+
+.prior.fixed	{
+	display:block; top:0; padding-top: 20px; width: 100%; cursor: default; background: url( img/nav.bg.png);
+}
+.prior.fixed > img	{
+	margin: 0 auto; 
+}
+header > span.fixed-parent	{
+	display:block; margin: 50px auto 100px; height: 128px;
+}
+
+section.sidebar .mod-blue.fixed	{
+	top: 98px; width: 258px;
+}
+
+

@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+/*  Administrator substyle */
+/*  part of tick.ee */
+
+
+/* ELEMENTS */
+
+.sitemap > ul > li {
+	float: left; min-width: 124px; margin: 4px 8px; padding: 4px 8px; background: rgba( 0,0,0, .2 ); box-shadow: 0 1px 0 rgba( 255,255,255, .2); border-radius: 8px;
+	color: #666;
+}
+
+.sitemap ul  ul {
+	margin-top: 4px; padding: 4px 8px; border-top: dotted 1px rgba(255,255,255, .2); 
+}
+
+.sitemap a { color: white; }
+.sitemap > ul > li:hover { background: black; }
+
+.childcloud > ul > li {
+	float: left; margin: 4px 8px; padding: 4px 8px; border-radius: 8px;
+	color: #666;
+}
+.childcloud a { color: #ccc; }
+
+
+/* DND CSS */
+/* Prevent the text content of draggable elements from being selectable. */
+[draggable]	{
+	user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none;
+}
+
+
+
+
+/* Containers */
+.childcloud > ul, .sitemap > ul { min-height: 124px; border: 1px dashed rgba( 0,0,0,0 ); border-radius: 8px; }
+.childcloud > ul.over, .sitemap > ul.over	{ border-color: black; }
+
+
+/* Draggable elements */
+
+.dragchild	{
+	border-left: dotted 1px rgba( 0,0,0,0 );
+}
+
+.dragchild.over	{
+	border-left-color: rgba( 255,255,255, .5 );
+}
+
+.dragchild.selected, .dragchild.selected:hover	{
+	background: #3e491b;
+}
+
+.dragchild.copyState, .dragchild.copyState:hover	{
+	background: #433510;
+}
+
+.dragchild.cutState, .dragchild.cutState:hover	{
+	background: #750909;
+}
+
+.drag	{
+	background: black; opacity: .5;
+}
+
+.dragchild ul	{ min-height: 4px; }
+
+.dragchild.over > ul	{
+	background: rgba( 255,255,255, .2 ); border-radius: 8px; border-color: rgba( 0,0,0,0 );
+}
+
+.dragchild > ul.over	{
+	background: white;  border-radius: 8px; border: 1px solid black;
+}
+
+.dragchild > ul.over li a, .dragchild > ul.over li	{
+	color: grey; text-shadow: none;
+}
+
+.dragchild.drag ul	{ opacity: .2; }
+
+
+#addpage	{
+	cursor: pointer; text-decoration: underline;
+}
+
+
+
+/* EDITABLES */
+header h1	{ margin-bottom: 12px; }
+
+[contenteditable]	{
+	min-width: 20px; outline: none; border-bottom: 1px dotted rgba( 255,255,255, .12 )
+}
+
+[contenteditable]:focus	{
+	border-color: rgba( 255,255,255, .5 )
+}
+
+span[contenteditable]	{ font-size: 14px; color: #C6B9A2; }
+
+.langs {
+	display:block; margin: 0 auto 24px; width: 72px;
+}
+
+.langs	li	{
+	width: 24px; padding: 4px; margin: 2px; background: #111; border-radius: 4px; float:left; text-align: center;
+	color: #666; cursor: pointer;
+}
+
+
+/* CONTENT BLOCKS (cblock) */
+.cbrow	{
+	min-height: 24px; height: 120px; border: 1px dashed rgba(0,0,0, .2); margin: 8px 0; padding: 1% 0;
+}
+.cbrow:hover	{ border-color: black; }
+
+.cblock	{
+	float:left; width: 10%; margin: 0 0 0 1%; padding-top: 42px; height: 78px; background: rgba( 0,0,0, .12 ); border: 1px dashed rgba(0,0,0, 0); cursor: default;
+	font-size: 14px; color: #666; text-align: center; text-shadow: 0 -1px 0 black;
+}
+.cbrow:hover .cblock	{ border-color: rgba(0,0,0, .4 ); }
+.cblock:hover	{
+	background: none; border: 1px dashed rgba(0,0,0, 1);
+}
+.cblock [field=title]	{ color: #999; }
+
+
+.cbadd	{
+	padding: 4px 6px; background: green; border-radius: 3px;
+	color: #ccc; cursor: default;  user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none;
+}
+.cbadd:hover	{ background: black; }
+.cbadd:before	{
+	content: "+ "; color: white; font-size: 15px; text-shadow: none;
+}
+
+/* Delete button */
+.killdot	{
+	position:relative; float:right; opacity: 0; right: -12px; background: black; line-height: 10px ; width: 11px; height: 11px; text-align: center;  margin: 2px 0; cursor:pointer;
+	border-radius: 20px; border: 2px solid rgba( 255,255,255, .8 ); box-shadow: 0 1px 2px rgba( 0,0,0, .5);
+	color:white; font: 10px titlefont, "Helvetica Neue";
+}
+[draggable]:hover .killdot 	{ opacity: .5; }
+[deletable]:hover > .killdot	{ opacity: .2; right: -20px; margin: 0; }
+[draggable] .killdot:hover, [deletable] .killdot:hover	{ opacity: 1; }
+
+/* Resizable draggables */
+li .dragdot	{
+	position:relative; opacity: 0; background: red; width: 8px; height: 8px; margin-top: 50px; cursor: "e-resize";
+	border-radius: 10px; border: 3px solid rgba( 255,255,255, .5 ); box-shadow: 0 1px 2px rgba( 0,0,0, .5);
+}
+li .dragdot.right	{
+	float: right; right: -7px;
+}
+li:hover .dragdot	{ opacity: .2; }
+li:hover .dragdot:hover	{ opacity: 1;  }
+
+li.drag .dragdot	{
+	opacity: 0;
+}
+
+/* message */
+#message	{
+	position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba( 38,38,38, .68 ); z-index: 99;
+}
+
+#message .content	{
+	width: 680px; height: 420px; padding: 24px; margin: 10% auto; background: #333; border-radius: 4px; box-shadow: 0 1px 4px #111; border: 1px solid #4a4a4a;
+}
+
+#message [field=title], #message [field=content]	{ display:block; }
+#message [field=content]	{
+	margin-top: 12px; padding: 4px 0; background: rgba(0,0,0, .2); font-size: 12px; 
+}
+#message [field=title]:after, #message [field=content]:after	{
+	margin-left: 8px; color: #666; font-style: italic; border: none; float: right; font-size: 11px; 
+}
+#message [field=title]:after	{ content: "title"; }
+#message [field=content]:after	{ content: "content"; }
+#message .killdot	{
+	opacity: .5; right: -20px; top: -20px;
+}
+#message .killdot:hover	{ opacity: 1; }

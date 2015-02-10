@@ -1,0 +1,26 @@
+/* Guest result container */
+#send-container	{
+	min-height: 200px; background: url( img/sidebar.bg.png); overflow-x: hidden; border-top: 1px solid #C1CDD9; border-bottom: 1px solid #EDF0F3;
+}
+#send-container	{ border-radius: 3px; }
+#send-container li	{ border-left: 0; padding: 12px; }
+#send-container li.success	{ background: #c1cab5; }
+#send-container li.fail	{ background: #cabdb5; }
+
+/* Light version */
+.light	{ color: #999; font-size: .92em; line-height: 1.2em; text-align: justify; }
+.light a	{ font-weight: 500; }
+.light switch	{ margin-bottom: 12px; }
+
+
+
+/* Tickee order */
+.sales.fancy	{ text-align: center; }
+
+
+/* SU Event  */
+.TickeeSu_event.tickets_overview li	{ display: block; padding: 8px 0; clear: both; }
+
+
+/* Upgrade */
+.upgrade iframe	{ width: 100%; height: 400px; overflow-x: hidden; overflow-y: auto; }
